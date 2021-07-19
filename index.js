@@ -237,7 +237,7 @@ let controllerGrip1, controllerGrip2;
 
 let controls;
 
-const sphereRadius = 0.5;
+const sphereRadius = 0.3;
 
 init();
 animate();
