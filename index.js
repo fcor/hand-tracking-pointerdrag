@@ -428,9 +428,8 @@ function init() {
   rbEntity.addComponent(Intersectable);
   rbEntity.addComponent(Object3D, { object: resetButton });
   const rbAction = function () {
-    // box1.position.set(-0.2, 1.4, -2.5);
-    // box2.position.set(0.2, 1.4, -2.5);
-    console.log("reset");
+    box1.position.set(-0.2, 1.4, -2.5);
+    box2.position.set(0.2, 1.4, -2.5);
   };
 
   rbEntity.addComponent(Button, { action: rbAction });
