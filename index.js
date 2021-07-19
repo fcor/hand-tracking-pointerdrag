@@ -235,14 +235,8 @@ let hand1, hand2;
 let controller1, controller2;
 let controllerGrip1, controllerGrip2;
 
-const tmpVector1 = new THREE.Vector3();
-const tmpVector2 = new THREE.Vector3();
-
 let controls;
 
-let grabbing = false;
-
-const spheres = [];
 const sphereRadius = 0.05;
 
 init();
@@ -349,11 +343,11 @@ function init() {
 
   const box1 = new THREE.Mesh(geometry, material);
   box1.geometry.computeBoundingSphere();
-  box1.position.set(-0.2, 1.4, -0.5);
+  box1.position.set(-0.2, 1.4, -2.5);
 
   const box2 = new THREE.Mesh(geometry, material);
   box2.geometry.computeBoundingSphere();
-  box2.position.set(0.2, 1.4, -0.5);
+  box2.position.set(0.2, 1.4, -2.5);
 
   scene.add(box1, box2);
 
