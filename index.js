@@ -343,11 +343,11 @@ function init() {
 
   const box1 = new THREE.Mesh(geometry, material);
   box1.geometry.computeBoundingSphere();
-  box1.position.set(-0.6, 1.4, -1.5);
+  box1.position.set(-0.3, 1.4, -1.5);
 
   const box2 = new THREE.Mesh(geometry, material);
   box2.geometry.computeBoundingSphere();
-  box2.position.set(0.6, 1.4, -1.5);
+  box2.position.set(0.3, 1.4, -1.5);
 
   scene.add(box1, box2);
 
@@ -357,7 +357,7 @@ function init() {
     transparent: true,
   });
   const menuMesh = new THREE.Mesh(menuGeometry, menuMaterial);
-  menuMesh.position.set(0.4, 1, -1);
+  menuMesh.position.set(0.5, 1, -1);
   menuMesh.rotation.y = -Math.PI / 12;
   scene.add(menuMesh);
 
@@ -428,8 +428,10 @@ function init() {
   rbEntity.addComponent(Intersectable);
   rbEntity.addComponent(Object3D, { object: resetButton });
   const rbAction = function () {
-    box1.position.set(-0.2, 1.4, -2.5);
-    box2.position.set(0.2, 1.4, -2.5);
+    box1.position.set(-0.3, 1.4, -2.5);
+    box1.rotation.set(0, 0, 0);
+    box2.position.set(0.3, 1.4, -2.5);
+    box2.rotation.set(0, 0, 0);
   };
 
   rbEntity.addComponent(Button, { action: rbAction });
