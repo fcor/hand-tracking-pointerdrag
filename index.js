@@ -237,7 +237,7 @@ let controllerGrip1, controllerGrip2;
 
 let controls;
 
-const sphereRadius = 0.05;
+const sphereRadius = 0.5;
 
 init();
 animate();
@@ -298,7 +298,7 @@ function init() {
   controller1 = renderer.xr.getController(0);
   scene.add(controller1);
 
-  controller2 = renderer.xr.getController(2);
+  controller2 = renderer.xr.getController(1);
   scene.add(controller2);
 
   const controllerModelFactory = new XRControllerModelFactory();
@@ -343,11 +343,11 @@ function init() {
 
   const box1 = new THREE.Mesh(geometry, material);
   box1.geometry.computeBoundingSphere();
-  box1.position.set(-0.2, 1.4, -2.5);
+  box1.position.set(-0.6, 1.4, -1.5);
 
   const box2 = new THREE.Mesh(geometry, material);
   box2.geometry.computeBoundingSphere();
-  box2.position.set(0.2, 1.4, -2.5);
+  box2.position.set(0.6, 1.4, -1.5);
 
   scene.add(box1, box2);
 
