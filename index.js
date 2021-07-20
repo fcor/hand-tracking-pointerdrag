@@ -336,18 +336,18 @@ function init() {
     sphereRadius
   );
   const material = new THREE.MeshStandardMaterial({
-    color: 0xff0000,
+    color: 0x0000ff,
     roughness: 1.0,
     metalness: 0.0,
   });
 
   const box1 = new THREE.Mesh(geometry, material);
   box1.geometry.computeBoundingSphere();
-  box1.position.set(-0.3, 1.4, -1.5);
+  box1.position.set(-0.3, 1.4, -2.5);
 
   const box2 = new THREE.Mesh(geometry, material);
   box2.geometry.computeBoundingSphere();
-  box2.position.set(0.3, 1.4, -1.5);
+  box2.position.set(0.3, 1.4, -2.5);
 
   scene.add(box1, box2);
 
